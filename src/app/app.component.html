@@ -1,0 +1,16 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align: center;">
+  <h1>
+    Fetch All Books
+  </h1>
+</div>
+
+<button (click)="fetchPeople()">Fetch people</button>
+
+<hr />
+<h5 *ngIf="isLoading">Loading ...</h5>
+<ul>
+  <li *ngFor="let person of people$ | async">
+    {{ person.name }}:   {{ person.email }}
+  </li>
+</ul>
